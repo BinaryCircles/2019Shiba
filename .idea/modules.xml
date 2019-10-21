@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/2019AntaresJava.iml" filepath="$PROJECT_DIR$/2019AntaresJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2019AntaresJava.main.iml" filepath="$PROJECT_DIR$/.idea/modules/2019AntaresJava.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2019AntaresJava.test.iml" filepath="$PROJECT_DIR$/.idea/modules/2019AntaresJava.test.iml" />
+    </modules>
+  </component>
+</project>
