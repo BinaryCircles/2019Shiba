@@ -26,7 +26,7 @@ public class PneumaticSubsystem extends Subsystem {
     hatchMech = new DoubleSolenoid(RobotMap.solenoidFront, RobotMap.solenoidBack);
   }
 
-  // extend or unextend hatch mech
+  // extend or retract hatch mech
   public void extendHatch() {
     hatchMech.set(DoubleSolenoid.Value.kForward);
   }

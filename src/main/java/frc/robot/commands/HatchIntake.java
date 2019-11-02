@@ -24,10 +24,24 @@ public class HatchIntake extends Command {
   protected void execute() {
     if (Robot.oi.driveController.getAButton()) {
       Robot.s_hatch.succ();
+      Robot.s_hatch.setVibration(Robot.oi.driveController, 0.5);
     } else if (Robot.oi.driveController.getBButton()) {
       Robot.s_hatch.spit();
+      Robot.s_hatch.setVibration(Robot.oi.driveController, 0.5);
     } else if (Robot.oi.driveController.getAButtonReleased() || Robot.oi.driveController.getBButtonReleased()) {
       Robot.s_hatch.atRest();
+      Robot.s_hatch.setVibration(Robot.oi.driveController, 0);
+    }
+
+    if (Robot.oi.operatorController.getAButton()) {
+      Robot.s_hatch.succ();
+      Robot.s_hatch.setVibration(Robot.oi.operatorController, 0.5);
+    } else if (Robot.oi.operatorController.getBButton()) {
+      Robot.s_hatch.spit();
+      Robot.s_hatch.setVibration(Robot.oi.operatorController, 0.5);
+    } else if (Robot.oi.operatorController.getAButtonReleased() || Robot.oi.operatorController.getBButtonReleased()) {
+      Robot.s_hatch.atRest();
+      Robot.s_hatch.setVibration(Robot.oi.operatorController, 0);
     }
 
     SmartDashboard.putNumber("hatch current", Robot.s_hatch.intake_motor.getOutputCurrent());

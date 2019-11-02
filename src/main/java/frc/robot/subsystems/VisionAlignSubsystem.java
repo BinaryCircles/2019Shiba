@@ -31,18 +31,23 @@ public class VisionAlignSubsystem extends Subsystem {
     tapeDetected = visionTable.getEntry("tapeDetected");
     tapeYaw = visionTable.getEntry("tapeYaw");
 
-    kP = 0.1;
+    kP = 0.08;
   }
 
   public double calculateOutput() {
-    // find the error in angle based on yaw feedback from vision loo
-    SmartDashboard.putNumber("vision output", (-kP * tapeYaw.getDouble(0)));
-    return -kP * tapeYaw.getDouble(0);
+    // find the error in angle based on yaw feedback from vision loop
+    if (tapeDetected.getBoolean(true) && Math.abs(tapeYaw.getDouble(0)) > 2) {
+      SmartDashboard.putNumber("vision output", (-kP * tapeYaw.getDouble(0)));
+      return -kP * tapeYaw.getDouble(0);
+    } else {
+      SmartDashboard.putNumber("vision output", 0);
+      return 0;
+    }
   }
 
   // move the robot to the center
   public void alignRobot() {
-    Robot.s_drive.curveDrive(0, calculateOutput() * 0.1, true);
+    Robot.s_drive.curveDrive(-0.25, calculateOutput() * 0.5, true);
   }
 
   @Override

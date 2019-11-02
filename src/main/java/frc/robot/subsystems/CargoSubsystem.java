@@ -16,37 +16,26 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Robot;
 import frc.robot.RobotMap;
 
-public class HatchIntakeSubsystem extends Subsystem {
+public class CargoSubsystem extends Subsystem {
 
-  public WPI_TalonSRX intake_motor;
-  public boolean hatchIn;
+  public WPI_VictorSPX cargo_motor;
+  public boolean cargoIn;
 
   // class constructor
-  public HatchIntakeSubsystem() {
-    intake_motor = new WPI_TalonSRX(RobotMap.intake_motor);
-    hatchIn = true;
+  public CargoSubsystem() {
+    cargo_motor = new WPI_VictorSPX(RobotMap.cargo_motor);
   }
 
   public void succ() {
-    if (!hatchIn) {
-      if (intake_motor.getOutputCurrent() <= 70.0) {
-        intake_motor.set(1);
-      } else {
-        intake_motor.set(0.7);
-        hatchIn = true;
-        SmartDashboard.putBoolean("hatch in", hatchIn);
-      }
-    }
+    cargo_motor.set(1);
   }
 
   public void spit() {
-    intake_motor.set(-1);
-    hatchIn = false;
-    SmartDashboard.putBoolean("hatch in", hatchIn);
+    cargo_motor.set(-1);
   }
 
   public void atRest() {
-    intake_motor.set(0.08);
+    cargo_motor.set(0);
   }
 
   public void setVibration(XboxController controller, double power) {

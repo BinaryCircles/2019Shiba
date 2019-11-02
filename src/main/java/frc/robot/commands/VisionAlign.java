@@ -25,10 +25,7 @@ public class VisionAlign extends Command {
   protected void execute() {
 
     if (Robot.oi.driveController.getBumper(GenericHID.Hand.kLeft)) {
-      Robot.s_hatchExtend.extendHatch();
       Robot.s_visionAlign.alignRobot();
-    } else {
-      Robot.s_hatchExtend.retractHatch();
     }
 
   }

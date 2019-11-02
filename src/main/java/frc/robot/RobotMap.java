@@ -10,13 +10,14 @@ package frc.robot;
 public class RobotMap {
   
   // drive motors
-  public static final int talon_fl = 5;
+  public static final int talon_fl = 2;
   public static final int talon_fr = 1;
-  public static final int victor_bl = 8;
-  public static final int victor_br = 3;
+  public static final int victor_bl = 4;
+  public static final int victor_br = 8;
 
   // intake motors
-  public static final int intake_motor = 2;
+  public static final int intake_motor = 5;
+  public static final int cargo_motor = 3;
 
   // pneumatics
   public static final int solenoidFront = 0;

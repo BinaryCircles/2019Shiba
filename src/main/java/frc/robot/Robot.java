@@ -22,14 +22,16 @@ public class Robot extends TimedRobot {
   public static DriveSubsystem s_drive = new DriveSubsystem();
   public static PneumaticSubsystem s_hatchExtend = new PneumaticSubsystem();
   public static HatchIntakeSubsystem s_hatch = new HatchIntakeSubsystem();
+  public static CargoSubsystem s_cargo = new CargoSubsystem();
   public static VisionSubsystem s_vision = new VisionSubsystem();
   public static VisionAlignSubsystem s_visionAlign = new VisionAlignSubsystem();
   public static ExampleSubsystem s_subsystem = new ExampleSubsystem();
- 
+
   // instantiate commands
   public static Drive c_drive = new Drive();
   public static ActuatePneumatic c_hatchExtend = new ActuatePneumatic();
   public static HatchIntake c_hatch = new HatchIntake();
+  public static CargoIntake c_cargo = new CargoIntake();
   public static Vision c_vision = new Vision();
   public static VisionAlign c_visionAlign = new VisionAlign();
 
@@ -78,6 +80,7 @@ public class Robot extends TimedRobot {
     c_vision.start();
     c_visionAlign.start();
     c_hatch.start();
+    c_cargo.start();
   }
 
   @Override
@@ -97,6 +100,7 @@ public class Robot extends TimedRobot {
     c_vision.start();
     c_visionAlign.start();
     c_hatch.start();
+    c_cargo.start();
   }
 
   @Override

@@ -30,11 +30,12 @@ public class ActuatePneumatic extends Command {
   protected void execute() {
     if (Robot.oi.driveController.getBumper(GenericHID.Hand.kRight)) {
       Robot.s_hatchExtend.extendHatch();
-    } else if (Robot.oi.driveController.getBumper(GenericHID.Hand.kLeft)) {
-      Robot.s_hatchExtend.extendHatch();
-      Robot.s_visionAlign.alignRobot();
     } else {
       Robot.s_hatchExtend.retractHatch();
+    }
+
+    if (Robot.oi.driveController.getBumper(GenericHID.Hand.kLeft)) { ;
+      Robot.s_visionAlign.alignRobot();
     }
 
     if (Robot.oi.driveController.getBumperPressed(GenericHID.Hand.kRight) || Robot.oi.driveController.getBumperReleased(GenericHID.Hand.kRight) || Robot.oi.driveController.getBumperPressed(GenericHID.Hand.kLeft) || Robot.oi.driveController.getBumperReleased(GenericHID.Hand.kLeft)) {
