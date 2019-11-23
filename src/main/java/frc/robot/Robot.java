@@ -19,7 +19,7 @@ import frc.robot.subsystems.*;
 
 public class Robot extends TimedRobot {
   // instantiate subsystems
-  public static DriveSubsystem s_drive = new DriveSubsystem();
+  public static DriveSubsystem2 s_drive = new DriveSubsystem2();
   public static PneumaticSubsystem s_hatchExtend = new PneumaticSubsystem();
   public static HatchIntakeSubsystem s_hatch = new HatchIntakeSubsystem();
   public static CargoSubsystem s_cargo = new CargoSubsystem();
@@ -28,7 +28,7 @@ public class Robot extends TimedRobot {
   public static ExampleSubsystem s_subsystem = new ExampleSubsystem();
 
   // instantiate commands
-  public static Drive c_drive = new Drive();
+  public static Drive2 c_drive = new Drive2();
   public static ActuatePneumatic c_hatchExtend = new ActuatePneumatic();
   public static HatchIntake c_hatch = new HatchIntake();
   public static CargoIntake c_cargo = new CargoIntake();

@@ -33,7 +33,7 @@ public class CargoIntake extends Command {
       Robot.s_cargo.setVibration(Robot.oi.driveController, 0);
     }
 
-    if (Robot.oi.driveController.getPOV() == -1) {
+    /*if (Robot.oi.driveController.getPOV() == -1) {
       if (Robot.oi.getTriggerMagnitude(Robot.oi.operatorController) < -0) {
         Robot.s_cargo.succ();
         Robot.s_cargo.setVibration(Robot.oi.operatorController, 0.5);
@@ -43,10 +43,10 @@ public class CargoIntake extends Command {
       } else if (Robot.oi.getTriggerMagnitude(Robot.oi.operatorController) == 0){
         Robot.s_cargo.atRest();
         Robot.s_cargo.setVibration(Robot.oi.operatorController, 0);
-      }
-    }
+      }*/
 
-  }
+      //Robot.s_cargo.analogControl(Robot.oi.operatorController);
+    }
 
   @Override
   protected boolean isFinished() {

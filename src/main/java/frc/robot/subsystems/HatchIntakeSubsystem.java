@@ -46,7 +46,7 @@ public class HatchIntakeSubsystem extends Subsystem {
   }
 
   public void atRest() {
-    intake_motor.set(0.08);
+    intake_motor.set(0.15);
   }
 
   public void setVibration(XboxController controller, double power) {

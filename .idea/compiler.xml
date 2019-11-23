@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="2019AntaresJava.main" target="11" />
       <module name="2019AntaresJava.test" target="11" />
+      <module name="2019Shiba.main" target="11" />
+      <module name="2019Shiba.test" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

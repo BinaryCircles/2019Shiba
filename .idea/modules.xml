@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/2019AntaresJava.iml" filepath="$PROJECT_DIR$/2019AntaresJava.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2019AntaresJava.main.iml" filepath="$PROJECT_DIR$/.idea/modules/2019AntaresJava.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2019AntaresJava.test.iml" filepath="$PROJECT_DIR$/.idea/modules/2019AntaresJava.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2019Shiba.iml" filepath="$PROJECT_DIR$/.idea/modules/2019Shiba.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2019Shiba.main.iml" filepath="$PROJECT_DIR$/.idea/modules/2019Shiba.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2019Shiba.test.iml" filepath="$PROJECT_DIR$/.idea/modules/2019Shiba.test.iml" />
     </modules>
   </component>
 </project>

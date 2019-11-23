@@ -27,15 +27,19 @@ public class CargoSubsystem extends Subsystem {
   }
 
   public void succ() {
-    cargo_motor.set(1);
-  }
-
-  public void spit() {
     cargo_motor.set(-1);
   }
 
+  public void spit() {
+    cargo_motor.set(0.6);
+  }
+
   public void atRest() {
-    cargo_motor.set(0);
+    cargo_motor.set(-0.08);
+  }
+
+  public void analogControl(XboxController controller) {
+    cargo_motor.set(-Robot.oi.getTriggerMagnitude(controller));
   }
 
   public void setVibration(XboxController controller, double power) {
